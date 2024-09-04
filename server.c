@@ -58,7 +58,7 @@ int start_server(int port) {
 
         pthread_t tid;
         pthread_create(&tid, NULL, client_thread, client_fd);
-        pthread_detach(tid); // Detach thread to reclaim resources when done
+        pthread_detach(tid);
     }
 
     close(server_fd);
