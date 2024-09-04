@@ -1,19 +1,28 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -O2 -pthread
+CFLAGS = -Wall -Wextra -O2 -pthread -Iinclude
 
-all: server
+SRC_DIR = src
+INCLUDE_DIR = include
+LOG_DIR = logs
 
-server: main.o server.o client.o
-	$(CC) $(CFLAGS) -o server main.o server.o client.o
+TARGET = server
 
-main.o: main.c server.h client.h
-	$(CC) $(CFLAGS) -c main.c
+SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/server.c $(SRC_DIR)/client.c
+OBJS = $(SRCS:.c=.o)
 
-server.o: server.c server.h client.h
-	$(CC) $(CFLAGS) -c server.c
+all: $(TARGET)
 
-client.o: client.c client.h
-	$(CC) $(CFLAGS) -c client.c
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c $(INCLUDE_DIR)/%.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o server
+	rm -f $(OBJS) $(TARGET)
+
+clean-logs:
+	rm -f $(LOG_DIR)/*.log
+
+run: $(TARGET)
+	./$(TARGET) 8080
