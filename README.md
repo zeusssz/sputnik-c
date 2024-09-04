@@ -1,4 +1,4 @@
-# Sputnik Server
+# Sputnik
 
 A simple multithreaded HTTP server implemented in C. This server is capable of serving static files from a designated directory and handling multiple client connections concurrently. 
 I certainly plan on improving this project, as I plan on using it for one of my projects.
