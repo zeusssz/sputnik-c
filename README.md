@@ -37,7 +37,7 @@ root/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/my_http_server.git
+   git clone https://github.com/zeusssz/sputnik-c.git
    cd my_http_server
    ```
 
