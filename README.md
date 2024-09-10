@@ -1,7 +1,7 @@
 # ![SputnikSmall](https://github.com/user-attachments/assets/32b78cb6-433c-4a0f-8c1f-520a1cf688fe) Sputnik
 
 A simple multithreaded HTTP server implemented in C. This server is capable of serving static files from a designated directory and handling multiple client connections concurrently. 
-I certainly plan on improving this project, as I plan on using it for one of my projects.
+I certainly plan on improving this project, as I plan on using it for one of my other projects.
 
 ## Features
 
