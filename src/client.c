@@ -36,7 +36,7 @@ void handle_client(int client_fd) {
     char buffer[BUFFER_SIZE];
     int bytes_read = read(client_fd, buffer, BUFFER_SIZE - 1);
     if (bytes_read < 0) {
-        perror("Read from client failed");
+        perror("Client Read failed");
         return;
     }
 
