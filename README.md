@@ -5,7 +5,7 @@ I certainly plan on improving this project, as I plan on using it for one of my 
 
 ## Features
 
-- Serve static files (HTML, CSS, JS) from the `www/` directory.
+- Serve static files (HTML, CSS, JS from the `www/` directory).
 - Multithreaded to handle multiple clients simultaneously.
 - Simple logging to track server activity.
 - Configurable via the `Makefile`.
