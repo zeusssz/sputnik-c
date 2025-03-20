@@ -9,21 +9,6 @@ I certainly plan on improving this project, as I plan on using it for one of my 
 - Multithreaded to handle multiple clients simultaneously.
 - Simple logging to track server activity.
 
-## Project Structure
-
-```
-root/
-├── src/
-│   ├── main.c
-│   ├── server.c
-│   └── client.c
-├── include/
-│   ├── server.h
-│   └── client.h
-├── www/
-├── logs/
-└──Makefile
-```
 
 ## Prerequisites
 
